@@ -1,0 +1,15 @@
+
+.image-cart-container{
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+}
+.image-cart-item{
+    position: relative;
+    top:-20px;
+    left: -20px;
+    width: 120px; 
+    height: 120px; 
+    object-fit: contain;
+    transform: rotate(-25deg);
+}

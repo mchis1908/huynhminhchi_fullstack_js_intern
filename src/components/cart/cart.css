@@ -1,0 +1,35 @@
+.cart-container{
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 28px;
+    padding: 12px 28px;
+    background-color: #fff;
+    height: 500px;
+    max-width: 360px;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.cart-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index:1;
+    height: 100%;
+    background-color: transparent;
+}
+
+.rounded{
+    width: 200px;
+    height: 200px;
+    background: #F6C90E;
+    border-radius: 100% !important;
+    position: absolute;
+    left:-100px;
+    top:-100px;
+    z-index:0;
+}

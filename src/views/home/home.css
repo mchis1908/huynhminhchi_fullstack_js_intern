@@ -1,0 +1,28 @@
+.home-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 16px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.rounded{
+    width: 4000px;
+    height: 4000px;
+    background: #F6C90E;
+    border-radius: 50% !important;
+    position: absolute;
+    left: -800px;
+    top: 400px;
+    z-index:0;
+}
