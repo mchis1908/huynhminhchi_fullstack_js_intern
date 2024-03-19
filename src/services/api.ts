@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const baseUrl = process.env.VUE_APP_API;
+// const baseUrl = process.env.VUE_APP_API;
+// const baseUrl = 'https://huynhminhchi-fullstack-js-intern-be.onrender.com/api/v1';
+const baseUrl = 'http://localhost:8000/api/v1';
 
 const config = {
     address: baseUrl,
@@ -80,43 +82,9 @@ const sendGetOnce = async (url: string, params = {}, headers = null) => {
     }
 };
 
-const sendGetPath = async (url: string, params: any = {}, headers = null) => {
-    try {
-        const path: any = params["path"];
-        const response = await $http.get(url + `/${path}`, { timeout: 600000 });
-        return response;
-    } catch (e: any) {
-        if (e.response) {
-            return e.response;
-        } else if (e.toString().includes("Network Error")) {
-            return "NETWORK_ERROR";
-        } else {
-            return null;
-        }
-    }
-};
-
-const sendDeletePath = async (url: string, params: any = {}, headers = null) => {
-    try {
-        const path: any = params["path"];
-        const response = await $http.delete(url + `/${path}`, { timeout: 600000 });
-        return response;
-    } catch (e: any) {
-        if (e.response) {
-            return e.response;
-        } else if (e.toString().includes("Network Error")) {
-            return "NETWORK_ERROR";
-        } else {
-            return null;
-        }
-    }
-};
-
 export {
 sendPostOnce,
 sendGetOnce,
-sendGetPath,
 sendPutOnce,
-sendDeletePath,
 sendDeleteOnce,
 };

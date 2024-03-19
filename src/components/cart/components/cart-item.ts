@@ -14,14 +14,14 @@ export default class CartItem extends Vue {
     public cartItem!: any;
 
     public increaseQuantity() {
-        this.$emit('increaseQuantity', this.cartItem?.id)
+        this.$emit('increaseQuantity', this.cartItem?._id)
     }
 
     public decreaseQuantity(){
-        this.$emit('decreaseQuantity', this.cartItem?.id)
+        this.$emit('decreaseQuantity', this.cartItem?._id)
     }
 
     public deleteItem(){
-        this.$emit('deleteItem', this.cartItem?.id)
+        this.$emit('deleteItem', this.cartItem?._id)
     }
 }

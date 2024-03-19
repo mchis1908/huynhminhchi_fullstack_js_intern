@@ -49,6 +49,6 @@ export default class ProductItem extends Vue {
     }
 
     public checkIsAdd(){
-        return this.cartItems.some((item:any) => item.id === this.productItem.id);
+        return this.cartItems.some((item:any) => item._id === this.productItem._id);
     }
 }

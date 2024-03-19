@@ -4,7 +4,7 @@
 <template>
     <div class="d-flex flex-column" style="gap:12px; background: transparent">
         <div class="d-flex justify-content-center align-items-center image-container" :style="{ background: productItem?.color ?? 'transparent' }">
-            <img class="image-product-item" :src="productItem?.image" :alt="productItem?.id"/>
+            <img class="image-product-item" :src="productItem?.image" :alt="productItem?._id"/>
         </div>
         <p style="font-weight: 600; font-size: 18px;">{{ productItem?.name }}</p>
         <p style="font-weight: 400; font-size: 12px;">{{ productItem?.description }}</p>

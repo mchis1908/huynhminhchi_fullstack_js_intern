@@ -10,7 +10,7 @@ import Cart from "@/components/cart/cart.vue";
   },
 })
 export default class Home extends Vue {
-  public isMobile: any = window.innerWidth > 767 ? false : true;
+  public isMobile: any = false;
   public unsubscribe!: any;
   
   public async beforeMounted(){
@@ -18,20 +18,8 @@ export default class Home extends Vue {
   }
 
   public async mounted() {
-    this.handleSubscribe()
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
-  }
-
-  public unmounted() {
-    this.unsubscribe()
-  }
-
-  public handleSubscribe() {
-    this.unsubscribe = this.$store.subscribe(async (mutation: any, state: any) => {
-      if (mutation.type === 'setNotifications') {
-      }
-    })
   }
 
   public handleResize() {

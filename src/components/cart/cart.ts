@@ -41,7 +41,7 @@ export default class Product extends Vue {
     }
 
     public increaseQuantity(id:any) {
-        const index = this.cartItems.findIndex((item:any) => item?.id === id);
+        const index = this.cartItems.findIndex((item:any) => item?._id === id);
 
         if (index !== -1) {
             this.cartItems[index].quantity += 1;
@@ -50,7 +50,7 @@ export default class Product extends Vue {
     }
 
     public decreaseQuantity(id:any){
-        const index = this.cartItems.findIndex((item:any) => item?.id === id);
+        const index = this.cartItems.findIndex((item:any) => item?._id === id);
 
         if (index !== -1) {
             this.cartItems[index].quantity -= 1;
@@ -62,7 +62,7 @@ export default class Product extends Vue {
     }
 
     public deleteItem(id:any){
-        const index = this.cartItems.findIndex((item:any) => item?.id === id);
+        const index = this.cartItems.findIndex((item:any) => item?._id === id);
         if (index !== -1) {
             this.cartItems.splice(index, 1);
             this.$store.commit("setCartItems", this.cartItems);

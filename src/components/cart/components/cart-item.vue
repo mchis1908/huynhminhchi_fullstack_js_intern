@@ -4,7 +4,7 @@
 <template>
     <div class="d-flex flex-row" style="gap: 16px">
         <div class="image-cart-container" :style="{ background: cartItem?.color ?? 'transparent' }">
-            <img class="image-cart-item" :src="cartItem?.image" :alt="cartItem?.id"/>
+            <img class="image-cart-item" :src="cartItem?.image" :alt="cartItem?._id"/>
         </div>
         <div class="d-flex flex-column w-100" style="gap: 4px;">
             <p style="font-weight: 600; font-size: 14px;">{{ cartItem?.name }}</p>
