@@ -1,8 +1,7 @@
 import axios from "axios";
 
 // const baseUrl = process.env.VUE_APP_API;
-// const baseUrl = 'https://huynhminhchi-fullstack-js-intern-be.onrender.com/api/v1';
-const baseUrl = 'http://localhost:8000/api/v1';
+const baseUrl = 'https://huynhminhchi-fullstack-js-intern-be.onrender.com/api/v1';
 
 const config = {
     address: baseUrl,
